@@ -117,7 +117,7 @@ main (int argc, char *argv[])
 										fprintf (outputFile, closeWhile);
 										addTab--;
 									} else if (buffer[count2] == '\n' || buffer[count2] == '\t' || buffer[count2] == ' ') {
-										// ignore
+										// Ignore whitespaces
 									} else {
 										printf ("Error: %d\n", buffer[count2]);
 										printf (compileCompilerFailed);
@@ -137,7 +137,6 @@ main (int argc, char *argv[])
 						fclose (outputFile);
 						fclose (inputFile);
 						
-						//sprintf (cmd, "%s \"%s\" %s \"%s\" %s\"%s\" %s", compiler_path, outFile, object_switch, exeFile, include_switch, compiler_include_path, lib_switch, compiler_lib_path, lib_switch, compiler_sp_lib_path, compiler_static_path);
 						sprintf (cmd, "%s \"%s\" %s \"%s\"", compiler_path, outFile, object_switch, exeFile);
 						system (cmd);
 						

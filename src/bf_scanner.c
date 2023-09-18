@@ -65,8 +65,6 @@ _loopCheck (char *filename)
 					openBracket++;
 				} else if (check[count] == ']') {
 					closeBracket++;
-				} else {
-					// ignore and proceed
 				}
 				
 				if (closeBracket > openBracket) {
